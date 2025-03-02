@@ -8,63 +8,46 @@ Which courses can I take first semester?,"You can take CET 1100, CET 1111, CET 1
 5. MAT 1275 (4 credits)
 6. ENG 1101 (3 credits) - Prerequisite: English Composition 1
 
-These courses do not have any prerequisites that you need to fulfill before taking them, so you can enroll in them during your first semester.",0.5975519525041947
+These courses do not have any prerequisites that you need to complete before enrolling, so you can take them in your first semester.",0.6180700462007376
 Can I take CET1100 after completing ENG1101?,"Yes, you can take CET 1100 after completing ENG 1101 because CET 1100 requires no prerequisite.","Yes, you can take CET 1100 after completing ENG 1101. There are no prerequisites or corequisites for CET 1100 that require ENG 1101.",0.7630583624573738
-"I have completed CET1111, CET1150, and ENG1101. What courses can I take next?","You can take CET 1100, CET 1120, MAT 1275, CET 1211, CET 1250 in the next semester.","Based on the courses you have completed (CET 1111, CET 1150, and ENG 1101), you can take the following courses in the next semester:
+"I have completed CET1111, CET1150, and ENG1101. What courses can I take next?","You can take CET 1100, CET 1120, MAT 1275, CET 1211, CET 1250 in the next semester.","Based on the courses you've completed (CET 1111, CET 1150, and ENG 1101), you can take the following courses in the next semester:
 
 1. **CET 1120 (1 cr)** - No prerequisites.
 2. **CET 1100 (2 cr)** - No prerequisites.
 3. **MAT 1275 (4 cr)** - No prerequisites.
-4. **CET 1211 (2 cr)** - Prerequisite: CET 1111 (You have completed this).
-5. **CET 1250 (4 cr)** - Prerequisite: CET 1150 (You have completed this).
-6. **ENG 1121 (3 cr)** - Prerequisite: ENG 1101 (You have completed this).
-7. **MAT 1375 (4 cr)** - Prerequisite: MAT 1275 (You can take MAT 1275 first).
-8. **Flex Core 1 (3 cr)** - No prerequisites.
+4. **CET 1211 (2 cr)** - Prerequisite: CET 1111. Corequisite: MAT 1275.
+5. **CET 1250 (4 cr)** - Prerequisite: CET 1150.
+6. **Flex Core 1 (3 cr)** - No prerequisites.
 
-You should consider taking CET 1120, CET 1100, and MAT 1275 to fulfill the prerequisites for future courses. Additionally, you can take CET 1211 and CET 1250 since you have completed their prerequisites.",0.6784669927988098
+You should consider taking MAT 1275 as it is a prerequisite or corequisite for several future courses.",0.6532267214588128
 Can you list all prerequisites and corequisites for CET 3615?,"Prerequisites of CET 3615 are MAT 1575, CET 3525, PHY 1434 or PHY 1442.","The prerequisites for CET 3615 are:
 
 1. MAT 1575
 2. CET 3525
 3. PHYS 1434 or PHYS 1442",0.7029594915666378
-Which general education courses are required for graduation?,"ENG 1101, MAT 1275, ENG 1121, MAT 1375, PHY 1433, MAT 1475, MAT 1575, Flex Core.","The general education courses required for graduation typically include:
+Which general education courses are required for graduation?,"ENG 1101, MAT 1275, ENG 1121, MAT 1375, PHY 1433, MAT 1475, MAT 1575, Flex Core.","The general education courses required for graduation in the Computer Engineering Technology program include:
 
-1. **English Composition:**
-   - ENG 1101 (3 credits)
-   - ENG 1121 (3 credits)
+1. **ENG 1101** - English Composition 1
+2. **ENG 1121** - English Composition 2
+3. **MAT 1275** - College Algebra and Trigonometry
+4. **MAT 1375** - Precalculus
+5. **MAT 1475** - Calculus I
+6. **MAT 1575** - Calculus II
+7. **MAT 2580** - Introduction to Linear Algebra
+8. **MAT 2680** - Differential Equations
+9. **PHY 1433** - General Physics I
+10. **PHY 1434** - General Physics II
+11. **COM 1330** - Public Speaking
+12. **Flex Core 1, 2, 3, and 4** - These are flexible core courses that can be chosen from a list of approved general education courses to fulfill the curriculum requirements.
 
-2. **Mathematics:**
-   - MAT 1275 (4 credits)
-   - MAT 1375 (4 credits)
-   - MAT 1475 (4 credits)
-   - MAT 1575 (4 credits)
-   - MAT 2580 (3 credits)
-   - MAT 2680 (3 credits)
-
-3. **Physics:**
-   - PHY 1433 (4 credits)
-   - PHY 1434 (3 credits)
-
-4. **Communication:**
-   - COM 1330 (3 credits)
-
-5. **Flex Core Courses:**
-   - Flex Core 1 (3 credits)
-   - Flex Core 2 (3 credits)
-   - Flex Core 3 (3 credits)
-   - Flex Core 4 (3 credits)
-
-6. **ID Course:**
-   - ID Course (credits not specified)
-
-These courses are part of the general education requirements and are necessary alongside major-specific courses to fulfill graduation requirements.",0.41333158695337474
+These courses are designed to provide a well-rounded education and are part of the general education requirements for the program.",0.46373889576016825
 "Given my completed courses (CET1111, CET1150, ENG1101), provide a custom-made step-by-step plan for the remaining semesters.","2nd semester: CET 1100, CET 1120, CET 1211, MAT 1275, CET 1250, ENG 1121
 3rd semester: CET 2312, MAT 1375, PHY 1433, CET 2350, CET 2370, CET 2390
 4th semester: CET 2450, CET 2455, CET 2461, Technical elective, Flex Core 1, MAT 1475
 5th semester: Flex Core 2, CET 3510, CET 3525, MAT 1575, PHY 1434
 6th semester: Flex Core 3, COM 1330, CET 3615, CET 3625, CET 3640, MAT 2680
 7th semester: CET 4705, CET 4711, CET 4773, Flex Core 4, Technical Elective 1
-8th semester: CET 4811, CET 4864, CET 4805, Technical Elective 2, ID","Based on the courses you've completed (CET 1111, CET 1150, ENG 1101), here's a step-by-step plan for the remaining semesters:
+8th semester: CET 4811, CET 4864, CET 4805, Technical Elective 2, ID","Based on your completed courses (CET 1111, CET 1150, ENG 1101), here's a step-by-step plan for the remaining semesters:
 
 **First Semester (Completed):**
 - CET 1111
@@ -72,59 +55,59 @@ These courses are part of the general education requirements and are necessary a
 - ENG 1101
 
 **Second Semester:**
-- CET 1120 (1 cr) - No prerequisites
-- CET 1100 (2 cr) - No prerequisites
-- MAT 1275 (4 cr) - No prerequisites
-- CET 1211 (2 cr) - Prerequisite: CET 1111; Corequisite: MAT 1275
-- CET 1250 (4 cr) - Prerequisite: CET 1150
-- ENG 1121 (3 cr) - No prerequisites
-- Flex Core 1 (3 cr) - No prerequisites
+1. CET 1120 (1 cr) - No prerequisites
+2. CET 1100 (2 cr) - No prerequisites
+3. MAT 1275 (4 cr) - No prerequisites
+4. CET 1211 (2 cr) - Prerequisite: CET 1111; Corequisite: MAT 1275
+5. CET 1250 (4 cr) - Prerequisite: CET 1150
+6. ENG 1121 (3 cr) - No prerequisites
+7. Flex Core 1 (3 cr) - No prerequisites
 
 **Third Semester:**
-- CET 2312 (4 cr) - Prerequisite: CET 1120; Corequisite: PHY 1433
-- CET 2350 (4 cr) - Prerequisite/Corequisite: CET 1250 and MAT 1375
-- CET 2370 (2 cr) - Prerequisite: CET 1250
-- CET 2390 (1 cr) - Prerequisite/Corequisite: CET 2370
-- PHY 1433 (4 cr) - Prerequisite: MAT 1275
+1. CET 2312 (4 cr) - Prerequisite: CET 1120; Corequisite: PHY 1433
+2. CET 2350 (4 cr) - Prerequisite/Corequisite: CET 1250 and MAT 1375
+3. CET 2370 (2 cr) - Prerequisite: CET 1250
+4. CET 2390 (1 cr) - Prerequisite/Corequisite: CET 2370
+5. PHY 1433 (4 cr) - Prerequisite: MAT 1275
 
 **Fourth Semester:**
-- CET 2450 (3 cr) - Prerequisite: CET 2350
-- CET 2455 (2 cr) - Prerequisite: CET 2370
-- CET 2461 (2 cr) - Prerequisite/Corequisite: CET 2455, MAT 1475
-- TECH ELECTIVE - No prerequisites
-- MAT 1475 (4 cr) - No prerequisites
-- FLEX CORE 2 (3 cr) - No prerequisites
+1. CET 2450 (3 cr) - Prerequisite: CET 2350
+2. CET 2455 (2 cr) - Prerequisite: CET 2370
+3. CET 2461 (2 cr) - Prerequisite/Corequisite: CET 2455, MAT 1475
+4. TECH ELECTIVE
+5. MAT 1475 (4 cr) - No prerequisites
+6. FLEX CORE 2 (3 cr) - No prerequisites
 
 **Fifth Semester:**
-- CET 3510 (4 cr) - Prerequisite: Previous course in digital electronics; Prerequisite/Corequisite: CET 2411 or CST 2403 and MAT 1575 or higher
-- CET 3525 (4 cr) - Prerequisite/Corequisite: MAT 1575
-- MAT 1575 (4 cr) - Prerequisite: MAT 1475
-- PHY 1434 (3 cr) - No prerequisites
+1. CET 3510 (4 cr) - Prerequisite: Previous course in digital electronics; Prerequisite/Corequisite: CET 2411 or CST 2403 and MAT 1575 or higher
+2. CET 3525 (4 cr) - Prerequisite/Corequisite: MAT 1575
+3. MAT 1575 (4 cr) - Prerequisite: MAT 1475
+4. PHY 1434 (3 cr) - No prerequisites
 
 **Sixth Semester:**
-- MAT 2680 (3 cr) - Prerequisite: MAT 1575
-- CET 3615 (4 cr) - Prerequisites: MAT 1575, CET 3525, and PHYS 1434 or PHYS 1442
-- CET 3625 (1 cr) - Prerequisite: CET 3525; Corequisite: MAT 2680
-- CET 3640 (3 cr) - Prerequisites: CET 2411 and CET 3510
-- Flex Core 3 - No prerequisites
-- COM 1330 (3 cr) - No prerequisites
+1. MAT 2680 (3 cr) - Prerequisite: MAT 1575
+2. CET 3615 (4 cr) - Prerequisites: MAT 1575, CET 3525, and PHYS 1434 or PHYS 1442
+3. CET 3625 (1 cr) - Prerequisite: CET 3525; Corequisite: MAT 2680
+4. CET 3640 (3 cr) - Prerequisites: CET 2411 and CET 3510
+5. Flex Core 3 - No prerequisites
+6. COM 1330 (3 cr) - No prerequisites
 
 **Seventh Semester:**
-- CET 4711 (2 cr) - Prerequisite and Corequisite: CET 3640 and CET 4705
-- MAT 2580 (3 cr) - Prerequisite/Corequisite: MAT 1575
-- CET 4705 (2 cr) - Prerequisite: CET 3625 with a grade of C or better
-- CET 4773 (4 cr) - Prerequisite: CET 3510
-- Technical Elective 1 (4 cr) - No prerequisites
-- Flex Core 4 - No prerequisites
+1. CET 4711 (2 cr) - Prerequisite and Corequisite: CET 3640 and CET 4705
+2. MAT 2580 (3 cr) - Prerequisite/Corequisite: MAT 1575
+3. CET 4705 (2 cr) - Prerequisite: CET 3625 with a grade of C or better
+4. CET 4773 (4 cr) - Prerequisite: CET 3510
+5. Technical Elective 1 (4 cr) - No prerequisites
+6. Flex Core 4 - No prerequisites
 
 **Eighth Semester:**
-- Technical Elective 2 (3 cr) - No prerequisites
-- CET 4811 (2 cr) - Prerequisites: CET 3640, CET 4711
-- CET 4805 (2 cr) - Prerequisite: CET 4705
-- CET 4864 (4 cr) - Prerequisites: CET 3625, MAT 2580
-- ID Course - No prerequisites
+1. Technical Elective 2 (3 cr) - No prerequisites
+2. CET 4811 (2 cr) - Prerequisites: CET 3640, CET 4711
+3. CET 4805 (2 cr) - Prerequisite: CET 4705
+4. CET 4864 (4 cr) - Prerequisites: CET 3625, MAT 2580
+5. ID Course - No prerequisites
 
-This plan ensures you meet all prerequisites and corequisites while progressing through the program. Adjustments may be needed based on course availability and personal preferences.",0.6961875528911644
+This plan ensures you meet all prerequisites and corequisites while progressing through the program. Adjustments may be needed based on course availability and personal preferences.",0.7010731395173464
 "I want to know the courses I can take in the 2nd semester. I've completed CET1120, CET 1150 but I haven't completed all the first-semester courses yet. Can you recommend some courses?","For the 2nd semester, you can take CET 1100, CET 1111, MAT 1275, CET 1250, ENG 1100, Flex Core 1.","Based on the courses you've completed (CET 1120 and CET 1150), here are the courses you can take in the second semester:
 
 1. **CET 1211 (2 cr)**: You have completed CET 1150, but you need to have completed or be taking MAT 1275 as a prerequisite or corequisite for CET 1211.
@@ -133,11 +116,11 @@ This plan ensures you meet all prerequisites and corequisites while progressing 
 
 3. **ENG 1121 (3 cr)**: There are no specific prerequisites mentioned for this course, so you can take it.
 
-4. **MAT 1375 (4 cr)**: You need to have completed MAT 1275 before taking this course.
+4. **MAT 1375 (4 cr)**: You need to have completed MAT 1275 to take this course. If you haven't completed MAT 1275, you should take it first.
 
 5. **Flex Core 1 (3 cr)**: This is a general education requirement, and you can take it without any prerequisites.
 
-To summarize, you can take CET 1250, ENG 1121, and Flex Core 1. If you complete or take MAT 1275 as a corequisite, you can also take CET 1211.",0.5928733528368533
+Based on your current progress, you can take CET 1250, ENG 1121, and Flex Core 1. If you haven't taken MAT 1275 yet, I recommend taking it as well, as it is a prerequisite for many future courses.",0.557732612363566
 "If I want to graduate in six/seven semesters instead of eight, how should I plan my courses?","1st semester: CET 1100, CET 1111, CET 1120, CET 1150, ENG 1100, MAT 1275
 2nd semester: CET 1211, CET 1250, CET 2312, CET 2350, MAT 1375, PHY 1433
 3rd semester: MAT 1475, PHY 1434, CET 2370, CET 2390, CET 2450, Technical Elective
@@ -172,9 +155,9 @@ To summarize, you can take CET 1250, ENG 1121, and Flex Core 1. If you complete 
 1. CET 2450 (3 cr)
 2. CET 2455 (2 cr)
 3. CET 2461 (2 cr)
-4. TECH ELECTIVE
-5. MAT 1475 (4 cr)
-6. FLEX CORE 2 (3 cr)
+4. MAT 1475 (4 cr)
+5. Flex Core 2 (3 cr)
+6. Technical Elective
 
 **Fifth Semester:**
 1. CET 3510 (4 cr)
@@ -205,11 +188,7 @@ To summarize, you can take CET 1250, ENG 1121, and Flex Core 1. If you complete 
 4. CET 4864 (4 cr)
 5. ID Course
 
-**Notes:**
-- Ensure you meet all prerequisites and corequisites for each course.
-- Consider taking summer courses to lighten the regular semester load.
-- Consult with an academic advisor to tailor the plan to your specific needs and to ensure you meet all graduation requirements.
-- Be prepared for a heavier course load each semester, which may require more time and effort.",0.5586307836622838
+To graduate in six or seven semesters, you may need to take summer courses or overload some semesters with additional credits. Ensure you meet all prerequisites and corequisites for each course. It's also advisable to consult with an academic advisor to tailor the plan to your specific needs and ensure you meet all graduation requirements.",0.5529311101033679
 List all courses till the eighth semester.,"1st semester: CET 1100, CET 1111, CET 1120, CET 1150, ENG 1100, MAT 1275
 2nd semester: CET 1211, MAT 1375, CET 1250, ENG 1121, PHY 1433
 3rd semester: CET 2312, MAT 1475, PHY 1434, CET 2350, CET 2370, CET 2390
@@ -243,7 +222,7 @@ List all courses till the eighth semester.,"1st semester: CET 1100, CET 1111, CE
 **Third Semester:**
 1. CET 2312 (4 cr)
    - Prerequisite: CET 1120
-   - Prerequisite/corequisite: PHY 1433
+   - Prerequisite or corequisite: PHY 1433
 2. CET 2350 (4 cr)
    - Prerequisite/corequisite: CET 1250 and MAT 1375
 3. CET 2370 (2 cr)
@@ -266,10 +245,10 @@ List all courses till the eighth semester.,"1st semester: CET 1100, CET 1111, CE
 
 **Fifth Semester:**
 1. CET 3510 (4 cr)
-   - Prerequisite: Previous course in digital electronics
-   - Prerequisite/corequisite: CET 2411 or CST 2403 and MAT 1575 or higher
+   - Prerequisite: A previous course in digital electronics
+   - Prerequisite or corequisites: CET 2411 or CST 2403 and MAT 1575 or higher
 2. CET 3525 (4 cr)
-   - Prerequisite/corequisite: MAT 1575
+   - Prerequisite or corequisite: MAT 1575
 3. MAT 1575 (4 cr)
    - Prerequisite: MAT 1475
 4. PHY 1434 (3 cr)
@@ -281,7 +260,7 @@ List all courses till the eighth semester.,"1st semester: CET 1100, CET 1111, CE
    - Prerequisites: MAT 1575, CET 3525, and PHYS 1434 or PHYS 1442
 3. CET 3625 (1 cr)
    - Prerequisite: CET 3525
-   - Prerequisite/corequisite: MAT 2680
+   - Prerequisite or corequisite: MAT 2680
 4. CET 3640 (3 cr)
    - Prerequisites: CET 2411 and CET 3510
 5. Flex Core 3
@@ -289,9 +268,9 @@ List all courses till the eighth semester.,"1st semester: CET 1100, CET 1111, CE
 
 **Seventh Semester:**
 1. CET 4711 (2 cr)
-   - Prerequisite and corequisite: CET 3640 and CET 4705
+   - Prerequisite and co-requisite: CET 3640 and CET 4705
 2. MAT 2580 (3 cr)
-   - Prerequisite or corequisite: MAT 1575
+   - Prerequisite or Corequisite: MAT 1575
 3. CET 4705 (2 cr)
    - Prerequisite: CET 3625 with a grade of C or better
 4. CET 4773 (4 cr)
@@ -309,4 +288,4 @@ List all courses till the eighth semester.,"1st semester: CET 1100, CET 1111, CE
    - Prerequisites: CET 3625, MAT 2580
 5. ID Course
 
-This list includes all the courses required from the first to the eighth semester, along with their prerequisites and corequisites.",0.6942234456115837
+This list includes all the courses required from the first to the eighth semester, along with their prerequisites and corequisites.",0.6920621932600894
