@@ -1,5 +1,4 @@
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
-from config import GOOGLE_API_KEY
 from dotenv import load_dotenv
 import getpass
 import os
