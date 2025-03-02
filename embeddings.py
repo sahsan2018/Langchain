@@ -9,8 +9,7 @@ load_dotenv()
 
 # Initialize embeddings and chat model
 embeddings = GoogleGenerativeAIEmbeddings(
-    model="models/embedding-001",
-    google_api_key=GOOGLE_API_KEY
+    model="models/embedding-001"
 )
 chat_model = ChatOpenAI(
     model="gpt-4o",
