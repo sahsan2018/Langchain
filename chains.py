@@ -28,7 +28,7 @@ from pathlib import Path
 # Get the current file's directory
 current_dir = Path(__file__).parent
 
-vector = FAISS.load_local(r"faissindexupdate6", embeddings, allow_dangerous_deserialization=True)
+vector = FAISS.load_local(r"faissindexupdate62", embeddings, allow_dangerous_deserialization=True)
 
 # Create retriever and retrieval chain
 retriever = vector.as_retriever()
