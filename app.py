@@ -337,7 +337,7 @@ def display_evaluation_results(location="main"):
     )
 
 def main():
-    st.set_page_config(page_title="Course Assistant", layout="wide")
+    st.set_page_config(page_title="Academic Advisement Bot", layout="wide")
     init_session_state()
     
     # Apply custom CSS
@@ -345,31 +345,50 @@ def main():
     
     # Header with improved styling
     st.markdown("""
-        <div style="text-align: center; padding: 30px 0; background: linear-gradient(135deg, #6366f1, #4f46e5); margin: -50px -50px 20px -50px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
-            <h1 style="color: white; font-size: 40px; font-weight: 700; margin-bottom: 10px; font-family: 'Arial', sans-serif;">
-                Course Assistant
-            </h1>
-            <p style="color: rgba(255, 255, 255, 0.9); font-size: 18px; font-weight: 400;">
-                Ask questions about your course material!
-            </p>
-        </div>
-    """, unsafe_allow_html=True)
-    
+            <div style="display: flex; justify-content: center; width: 100%; margin: 0 auto;">
+                <div style="display: inline-block; text-align: center; padding: 4px 20px; 
+                            background: linear-gradient(135deg, #4f46e5, #3b82f6); 
+                            border-radius: 6px; margin: 4px auto;
+                            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+                            border: 1px solid rgba(255, 255, 255, 0.1);
+                            backdrop-filter: blur(10px);
+                            max-width: fit-content;">
+                    <div style="display: flex; flex-direction: column; gap: 2px;">
+                        <h1 style="color: white; font-size: 18px; font-weight: 600; margin: 0; padding: 0; 
+                                   font-family: 'Arial', sans-serif; line-height: 1.2;
+                                   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);">
+                            Academic Advisement Bot
+                        </h1>
+                        <p style="color: rgba(255, 255, 255, 0.95); font-size: 11px; font-weight: 400; 
+                                  margin: 0; padding: 0; line-height: 1.2;
+                                  letter-spacing: 0.3px;">
+                            Ask questions about your course material!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <style>
+                div[data-testid="stVerticalBlock"] > div:first-child {
+                    text-align: center;
+                }
+            </style>
+        """, unsafe_allow_html=True)
+
     # Admin panel in sidebar for evaluation
     with st.sidebar:
         st.header("Admin Panel")
         if st.button("Run Automated Evaluation"):
             run_automated_evaluation()
-        
+
         if st.session_state.evaluation_complete:
             st.success("Evaluation completed! Results saved to qa_evaluation_results.csv")
             display_evaluation_results(location="sidebar")  # Pass location parameter
-    
+
     # Main app UI for normal chat
     if not st.session_state.in_evaluation_mode:
         # Chat container
         chat_container = st.container()
-        
+
         # Display chat messages
         with chat_container:
             for message in st.session_state.messages:
@@ -380,7 +399,7 @@ def main():
                     ),
                     unsafe_allow_html=True
                 )
-        
+
         # Input area with improved styling
         st.markdown("<div style='position: fixed; bottom: 0; left: 0; right: 0; padding: 20px; background: white; box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);'>", unsafe_allow_html=True)
         cols = st.columns([7, 1])
@@ -406,7 +425,7 @@ def main():
                 st.rerun()
         else:
             st.info("Evaluation in progress... Please wait.")
-    
+
     # Footer
     st.markdown("""
         <div style="text-align: center; padding: 20px 0; color: #6b7280; font-size: 14px;">
