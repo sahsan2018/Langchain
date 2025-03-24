@@ -1,4 +1,3 @@
-
 import streamlit as st
 from chains import rag_chain
 from history import get_session_history
@@ -8,6 +7,43 @@ from sklearn.metrics.pairwise import cosine_similarity
 import pandas as pd
 import numpy as np
 import time
+import os
+from dotenv import load_dotenv
+import json
+from openai import OpenAI
+
+# Load environment variables
+load_dotenv()
+
+def validate_api_key(api_key):
+    """Validate the API key format and test it"""
+    if not api_key:
+        return False, "API key cannot be empty"
+    
+    # Check if it starts with 'sk-' and has appropriate length
+    if not api_key.startswith('sk-') or len(api_key) < 20:
+        return False, "Invalid API key format. OpenAI API keys start with 'sk-' and are at least 20 characters long."
+    
+    try:
+        # Test the API key with a simple request
+        client = OpenAI(api_key=api_key)
+        client.models.list()  # This will fail if the API key is invalid
+        return True, "API key is valid"
+    except Exception as e:
+        return False, f"Invalid API key: {str(e)}"
+
+# Initialize API key in session state
+if "api_key" not in st.session_state:
+    st.session_state.api_key = os.getenv("OPENAI_API_KEY", "")
+
+def update_api_key(new_api_key):
+    """Update the API key in session state after validation"""
+    is_valid, message = validate_api_key(new_api_key)
+    if is_valid:
+        st.session_state.api_key = new_api_key
+        os.environ["OPENAI_API_KEY"] = new_api_key
+        return True, message
+    return False, message
 
 # Original RAG chain setup
 conversational_rag_chain = RunnableWithMessageHistory(
@@ -101,6 +137,8 @@ def init_session_state():
         st.session_state.current_question_index = 0
     if "in_evaluation_mode" not in st.session_state:
         st.session_state.in_evaluation_mode = False
+    if "api_key" not in st.session_state:
+        st.session_state.api_key = os.getenv("OPENAI_API_KEY", "")
 
 def format_message(text, is_user=False):
     """Format chat messages with styling"""
@@ -377,12 +415,33 @@ def main():
     # Admin panel in sidebar for evaluation
     with st.sidebar:
         st.header("Admin Panel")
+        
+        # API Key Management Section
+        st.subheader("API Key Management")
+        masked_api_key = st.session_state.api_key[:4] + "..." + st.session_state.api_key[-4:] if st.session_state.api_key else "Not set"
+        st.text(f"Current API Key: {masked_api_key}")
+        
+        new_api_key = st.text_input("New API Key", type="password", key="new_api_key")
+        if st.button("Update API Key"):
+            if new_api_key:
+                success, message = update_api_key(new_api_key)
+                if success:
+                    st.success(message)
+                    st.rerun()  # Rerun the app to apply changes
+                else:
+                    st.error(message)
+            else:
+                st.warning("Please enter a new API key.")
+        
+        st.divider()
+        
+        # Evaluation Section
         if st.button("Run Automated Evaluation"):
             run_automated_evaluation()
 
         if st.session_state.evaluation_complete:
             st.success("Evaluation completed! Results saved to qa_evaluation_results.csv")
-            display_evaluation_results(location="sidebar")  # Pass location parameter
+            display_evaluation_results(location="sidebar")
 
     # Main app UI for normal chat
     if not st.session_state.in_evaluation_mode:
