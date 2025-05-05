@@ -59,7 +59,6 @@ questions_answers = [
     # Easy
     ("Which courses can I take first semester?", 
      "You can take CET 1100, CET 1111, CET 1120, CET 1150, ENG 1101, MAT 1275."),
-    
     ("Can I take CET1100 after completing ENG1101?", 
      "Yes, you can take CET 1100 after completing ENG 1101 because CET 1100 requires no prerequisite."),
      ("What courses should I take after CET1111??", 
