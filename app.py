@@ -62,6 +62,18 @@ questions_answers = [
     
     ("Can I take CET1100 after completing ENG1101?", 
      "Yes, you can take CET 1100 after completing ENG 1101 because CET 1100 requires no prerequisite."),
+     ("What courses should I take after CET1111??", 
+     "CET 1120 (1 credit), CET 1150 (3 credits), CET 1211 (2 credits), MAT 1375 (4 credits), ENG 1121 (3 credits)."),
+    ("Can I overload credits this semester?",
+     " It's best to consult with your academic advisor or the registrar's office at your institution to understand the specific requirements and process for requesting a credit overload."),
+    ("I just completed CET1111 and MAT1275. What courses should I register for next semester?",
+     "Based on the courses you've completed (CET 1111 and MAT 1275), you can consider registering for the following courses next semester: CET 1120 (1 credit) if you haven't taken it yet, CET 1150 (3 credits), CET 1211 (2 credits), MAT 1375 (4 credits), ENG 1101 (3 credits)."),
+    ("Can I take CET2305 if I haven’t finished CET1150 yet?",
+     "No you can  not take CET2350 before taing CET1150 because CET1150 is prerequisite of CET1250, and CET1250 is prerequisite of CET2350. Since you havent completed CET1150, I assume you have not finished CET2350 as well, therefore you cant not take CET2350."),
+   ("I registered late and some CET classes are full. What can I do?",
+    "Talk to your advisor."),
+    ("I failed CET2450. Can I still register for upper-level CET classes?",
+     "CET2450 is not prerequired for any higher level CET classes so even  if you failed this class you can still take upper level CET classes."),
     # Medium
     ("I have completed CET1111, CET1150, and ENG1101. What courses can I take next?", 
      "You can take CET 1100, CET 1120, MAT 1275, CET 1211, CET 1250 in the next semester."),
@@ -69,6 +81,18 @@ questions_answers = [
      "Prerequisites of CET 3615 are MAT 1575, CET 3525, PHY 1434 or PHY 1442."),
     ("Which general education courses are required for graduation?", 
      "ENG 1101, MAT 1275, ENG 1121, MAT 1375, PHY 1433, MAT 1475, MAT 1575, Flex Core."),
+     ("How many credits can I take if I want to overload?",
+     "Generally, students are allowed to take a standard full-time course load, which is often around 12-18 credits per semester. To find out the specific number of credits you can take when overloading, and the process to request an overload, you should Consult with your Academic Advisor."),
+    ("Can I take an internship while I'm still completing my last two CET courses?",
+     "Yes you can take an internship even if you havent completed last two CET  courses since the internship lasses has no prerequisite."),
+    ("What are the General Education requirements for my AAS degree in CET?",
+     "For an AAS degree in Computer Engineering Technology (CET), the general education requirements are ENG 1101 (3 credits) - English Composition 1, ENG 1121 (3 credits), MAT 1275 (4 credits), MAT 1375 (4 credits) - The next math course after MAT 1275, PHY 1433 (4 credits), Flex Core 1 (3 credits), Flex Core 2 (3 credits), ID Course."),
+    ("I transferred from another college and completed Calculus I. Do I need to retake it here?"'
+     "If you have completed Calculus I at another college, you may not need to retake it, just have to make sure that course is equivalent to MAT 1475 (Calculus I) at your current institution."),
+    ("I'm interested in switching from AAS to BTech after finishing my AAS. What are the requirements?",
+     "Talk to your advisor."),
+    ("I need help choosing between CET3525 and CET3625 next semester. What should I consider?",
+     "You can not take CET3625 before taking CET3525, so first cosider taking CET3525 then in the next semester take CET3625."),
     # Hard
     ("Given my completed courses (CET1111, CET1150, ENG1101), provide a custom-made step-by-step plan for the remaining semesters.", 
      [
@@ -93,6 +117,8 @@ questions_answers = [
          "7th semester: CET 4805, CET 4811, CET 4864, Technical Elective 2, Flex Core 1, ENG 1121"
      ]),
     # Long Answer
+    ("My catalog year is 2023, but I took a break. Should I follow the new 2025 curriculum now?",
+     "Yes you have to follow 2025 curriculum."),
     ("List all courses till the eighth semester.", 
      [
          "1st semester: CET 1100, CET 1111, CET 1120, CET 1150, ENG 1100, MAT 1275",
