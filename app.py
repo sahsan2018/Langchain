@@ -87,7 +87,7 @@ questions_answers = [
      "Yes you can take an internship even if you havent completed last two CET  courses since the internship lasses has no prerequisite."),
     ("What are the General Education requirements for my AAS degree in CET?",
      "For an AAS degree in Computer Engineering Technology (CET), the general education requirements are ENG 1101 (3 credits) - English Composition 1, ENG 1121 (3 credits), MAT 1275 (4 credits), MAT 1375 (4 credits) - The next math course after MAT 1275, PHY 1433 (4 credits), Flex Core 1 (3 credits), Flex Core 2 (3 credits), ID Course."),
-    ("I transferred from another college and completed Calculus I. Do I need to retake it here?"'
+    ("I transferred from another college and completed Calculus I. Do I need to retake it here?",
      "If you have completed Calculus I at another college, you may not need to retake it, just have to make sure that course is equivalent to MAT 1475 (Calculus I) at your current institution."),
     ("I'm interested in switching from AAS to BTech after finishing my AAS. What are the requirements?",
      "Talk to your advisor."),
