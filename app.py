@@ -301,7 +301,7 @@ def handle_submit():
 
         # Reset input box
         st.session_state.user_input = ""
-
+questions_answers = load_questions() 
 def run_automated_evaluation():
     """Run the automated evaluation process"""
     st.session_state.in_evaluation_mode = True
@@ -311,7 +311,7 @@ def run_automated_evaluation():
     # Create a progress bar
     progress_bar = st.progress(0)
     status_text = st.empty()
-    
+    questions_answers = load_questions() 
     for i, (question, expected_answer) in enumerate(questions_answers):
         # Update progress and status
         progress = (i) / len(questions_answers)
