@@ -513,16 +513,16 @@ def main():
                     unsafe_allow_html=True
                 )
 
-        # Input area with improved styling
+        # Input area with improved styling - FIXED: Added proper label
         st.markdown("<div style='position: fixed; bottom: 0; left: 0; right: 0; padding: 20px; background: white; box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);'>", unsafe_allow_html=True)
         cols = st.columns([7, 1])
         with cols[0]:
             st.text_input(
-                "",
+                "Message",  # FIXED: Added proper label
                 key="user_input",
                 placeholder="Ask about courses...",
                 on_change=handle_submit,
-                label_visibility="collapsed"
+                label_visibility="collapsed"  # Hide the label but it's there for accessibility
             )
         with cols[1]:
             st.button("Send", on_click=handle_submit, use_container_width=True)
