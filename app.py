@@ -81,7 +81,7 @@ questions_answers = [
     ("Can you list all prerequisites and corequisites for CET 3615?", 
      "Prerequisites of CET 3615 are MAT 1575, CET 3525, PHY 1434 or PHY 1442."),
     ("Which general education courses are required for graduation?", 
-     "For the AAS degree in Computer Engineering Technology (CET), the General Education requirements typically include courses in English, Mathematics, and Flex Core electives. Here are the general education courses you need to complete:",
+     "For degree in Computer Engineering Technology (CET), the General Education requirements typically include courses in English, Mathematics, and Flex Core electives. Here are the general education courses you need to complete:",
      "ENG 1101 (3 credits), ENG 1121 (3 credits), MAT 1275 (4 credits), Flex Core 1 (3 credits), Flex Core 2 (3 credits), Flex core 2, Flex core 4, MAT 1375 (4 credits), MAT 1475 (4 credits), PHY 1433(4 credits), MAT 2680, MAT 2580, ID Course."),
      ("How many credits can I take if I want to overload?",
      "Generally, students are allowed to take a standard full-time course load, which is often around 12-18 credits per semester. To find out the specific number of credits you can take when overloading, and the process to request an overload, you should Consult with your Academic Advisor."),
@@ -98,7 +98,7 @@ questions_answers = [
     # Hard
     ("Given my completed courses (CET1111, CET1150, ENG1101), provide a custom-made step-by-step plan for the remaining semesters.", 
      [
-         "Based on the courses you've completed (CET 1111, CET 1150, ENG 1101), here's a step-by-step plan for the remaining semesters:",
+     "Based on the courses you've completed (CET 1111, CET 1150, ENG 1101), here's a step-by-step plan for the remaining semesters:",
      "You've already completed first semester.",
      "Second Semester: CET 1120 (2 credits) - No prerequisites.",
      "CET 1100 (2 credits) - No prerequisites.",
