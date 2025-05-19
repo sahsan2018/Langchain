@@ -97,7 +97,7 @@ questions_answers = [
      "You can not take CET3625 before taking CET3525, so first cosider taking CET3525 then in the next semester take CET3625."),
     # Hard
     ("Given my completed courses (CET1111, CET1150, ENG1101), provide a custom-made step-by-step plan for the remaining semesters.", 
-     [
+     
      "Based on the courses you've completed (CET 1111, CET 1150, ENG 1101), here's a step-by-step plan for the remaining semesters:",
      "You've already completed first semester.",
      "Second Semester: CET 1120 (2 credits) - No prerequisites.",
@@ -131,11 +131,11 @@ questions_answers = [
      "CET 4805 (2 credits) - Prerequisite: CET 4705.",
      "CET 4864 (4 credits) - Prerequisites: CET 3625, MAT 2580.",
      "ID Course.",
-     ]),
+     ),
     ("I want to know the courses I can take in the 2nd semester. I've completed CET1120, CET 1150 but I haven't completed all the first-semester courses yet. Can you recommend some courses?", 
      "For the 2nd semester, you can take CET 1100, CET 1111, MAT 1275, CET 1250, ENG 1100, Flex Core 1."),
     ("If I want to graduate in six/seven semesters instead of eight, how should I plan my courses?", 
-     [
+     
          "1st semester: CET 1100, CET 1111, CET 1120, CET 1150, ENG 1100, MAT 1275",
          "2nd semester: CET 1211, CET 1250, CET 2312, CET 2350, MAT 1375, PHY 1433",
          "3rd semester: MAT 1475, PHY 1434, CET 2370, CET 2390, CET 2450, Technical Elective",
@@ -143,12 +143,12 @@ questions_answers = [
          "5th semester: CET 3615, CET 3625, MAT 2680, CET 3640, Flex Core 3, CET 4773",
          "6th semester: CET 4705, CET 4711, Technical Elective 1, Flex Core 4, ID, MAT 2580, COM 1330",
          "7th semester: CET 4805, CET 4811, CET 4864, Technical Elective 2, Flex Core 1, ENG 1121"
-     ]),
+     ),
     # Long Answer
     ("My catalog year is 2023, but I took a break. Should I follow the new 2025 curriculum now?",
      "Yes you have to follow 2025 curriculum."),
     ("List all courses till the eighth semester.", 
-     [
+     
          "1st semester: CET 1100, CET 1111, CET 1120, CET 1150, ENG 1100, MAT 1275",
          "2nd semester: CET 1211, MAT 1375, CET 1250, ENG 1121, PHY 1433",
          "3rd semester: CET 2312, MAT 1475, PHY 1434, CET 2350, CET 2370, CET 2390",
@@ -157,7 +157,7 @@ questions_answers = [
          "6th semester: Flex Core 2, CET 3615, CET 3625, CET 3640, Technical Elective 1",
          "7th semester: CET 4705, CET 4711, CET 4773, Flex Core 3, Technical Elective 2",
          "8th semester: CET 4811, CET 4864, CET 4805, COM 1330, Flex Core 4"
-     ])
+     )
 ]
 
 def calculate_cosine_similarity(text1, text2):
