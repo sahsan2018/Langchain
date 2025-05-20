@@ -1,4 +1,13 @@
 import streamlit as st
+import os
+from dotenv import load_dotenv
+# Load environment variables
+load_dotenv()
+
+# Must precede any llm module imports
+from langtrace_python_sdk import langtrace
+langtrace.init(api_key = os.getenv('LANGTRACE_API_KEY'))
+
 from chains import rag_chain
 from history import get_session_history
 from langchain_core.runnables.history import RunnableWithMessageHistory
@@ -7,13 +16,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 import pandas as pd
 import numpy as np
 import time
-import os
-from dotenv import load_dotenv
 import json
 from openai import OpenAI
-
-# Load environment variables
-load_dotenv()
 
 def validate_api_key(api_key):
     """Validate the API key format and test it"""

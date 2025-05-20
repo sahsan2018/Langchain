@@ -12,7 +12,7 @@ embeddings = GoogleGenerativeAIEmbeddings(
     model="models/embedding-001"
 )
 chat_model = ChatOpenAI(
-    model="gpt-4o",
+    model="gpt-4o-mini",
     temperature=0,
     max_tokens=None,
     timeout=None,
