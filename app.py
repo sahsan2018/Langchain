@@ -1,12 +1,9 @@
 import streamlit as st
 import os
-from dotenv import load_dotenv
-# Load environment variables
-load_dotenv()
 
 # Must precede any llm module imports
 from langtrace_python_sdk import langtrace
-langtrace.init(api_key = os.getenv('LANGTRACE_API_KEY'))
+langtrace.init(api_key = st.secrets['LANGTRACE_API_KEY'])
 
 from chains import rag_chain
 from history import get_session_history
@@ -38,14 +35,14 @@ def validate_api_key(api_key):
 
 # Initialize API key in session state
 if "api_key" not in st.session_state:
-    st.session_state.api_key = os.getenv("OPENAI_API_KEY", "")
+    st.session_state.api_key = st.secrets["OPENAI_API_KEY"]
 
 def update_api_key(new_api_key):
     """Update the API key in session state after validation"""
     is_valid, message = validate_api_key(new_api_key)
     if is_valid:
         st.session_state.api_key = new_api_key
-        os.environ["OPENAI_API_KEY"] = new_api_key
+        st.secrets["OPENAI_API_KEY"] = new_api_key
         return True, message
     return False, message
 
@@ -194,7 +191,7 @@ def init_session_state():
     if "in_evaluation_mode" not in st.session_state:
         st.session_state.in_evaluation_mode = False
     if "api_key" not in st.session_state: # Already handled above, but good for completeness
-        st.session_state.api_key = os.getenv("OPENAI_API_KEY", "")
+        st.session_state.api_key = st.secrets["OPENAI_API_KEY"]
 
 
 def format_message(text, is_user=False):
