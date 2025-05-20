@@ -57,11 +57,11 @@ conversational_rag_chain = RunnableWithMessageHistory(
 # List of predefined Q&A pairs for evaluation
 questions_answers = [
     # Easy
-    ("Which courses can I take first semester?", 
+     ("Which courses can I take first semester?",
      "You can take CET 1100, CET 1111, CET 1120, CET 1150, ENG 1101, MAT 1275."),
-    ("Can I take CET1100 after completing ENG1101?", 
+    ("Can I take CET1100 after completing ENG1101?",
      "Yes, you can take CET 1100 after completing ENG 1101 because CET 1100 requires no prerequisite."),
-     ("What courses should I take after CET1111??", 
+    ("What courses should I take after CET1111??",
      "CET 1120 (1 credit), CET 1150 (3 credits), CET 1211 (2 credits), MAT 1375 (4 credits), ENG 1121 (3 credits)."),
     ("Can I overload credits this semester?",
      " It's best to consult with your academic advisor or the registrar's office at your institution to understand the specific requirements and process for requesting a credit overload."),
@@ -69,21 +69,22 @@ questions_answers = [
      "Based on the courses you've completed (CET 1111 and MAT 1275), you can consider registering for the following courses next semester: CET 1120 (1 credit) if you haven't taken it yet, CET 1150 (3 credits), CET 1211 (2 credits), MAT 1375 (4 credits), ENG 1101 (3 credits)."),
     ("Can I take CET2305 if I haven’t finished CET1150 yet?",
      "No you can  not take CET2350 before taing CET1150 because CET1150 is prerequisite of CET1250, and CET1250 is prerequisite of CET2350. Since you havent completed CET1150, I assume you have not finished CET2350 as well, therefore you cant not take CET2350."),
-   ("I registered late and some CET classes are full. What can I do?",
-    "Talk to your advisor."),
+    ("I registered late and some CET classes are full. What can I do?",
+     "Talk to your advisor."),
     ("I failed CET2450. Can I still register for upper-level CET classes?",
      "CET2450 is not prerequired for any higher level CET classes so even  if you failed this class you can still take upper level CET classes."),
     # Medium
     ("The courses of the CET department have been changed to EMT to CET. I have failed in EMT1255, which class I should take as an equivalent class to EMT 1255.",
      "If you failed EMT 1255, you should take CET 2350, as EMT 1255 is equivalent to CET 2350."),
-    ("I have completed CET1111, CET1150, and ENG1101. What courses can I take next?", 
+    ("I have completed CET1111, CET1150, and ENG1101. What courses can I take next?",
      "You can take CET 1100, CET 1120, MAT 1275, CET 1211, CET 1250 in the next semester."),
-    ("Can you list all prerequisites and corequisites for CET 3615?", 
+    ("Can you list all prerequisites and corequisites for CET 3615?",
      "Prerequisites of CET 3615 are MAT 1575, CET 3525, PHY 1434 or PHY 1442."),
-    ("Which general education courses are required for graduation?", 
-     "For degree in Computer Engineering Technology (CET), the General Education requirements typically include courses in English, Mathematics, and Flex Core electives. Here are the general education courses you need to complete:",
-     "ENG 1101 (3 credits), ENG 1121 (3 credits), MAT 1275 (4 credits), Flex Core 1 (3 credits), Flex Core 2 (3 credits), Flex core 2, Flex core 4, MAT 1375 (4 credits), MAT 1475 (4 credits), PHY 1433(4 credits), MAT 2680, MAT 2580, ID Course."),
-     ("How many credits can I take if I want to overload?",
+    ("Which general education courses are required for graduation?",
+     """For degree in Computer Engineering Technology (CET), the General Education requirements typically include courses in English, Mathematics, and Flex Core electives. Here are the general education courses you need to complete:
+ENG 1101 (3 credits), ENG 1121 (3 credits), MAT 1275 (4 credits), Flex Core 1 (3 credits), Flex Core 2 (3 credits), Flex core 2, Flex core 4, MAT 1375 (4 credits), MAT 1475 (4 credits), PHY 1433(4 credits), MAT 2680, MAT 2580, ID Course."""
+    ),
+    ("How many credits can I take if I want to overload?",
      "Generally, students are allowed to take a standard full-time course load, which is often around 12-18 credits per semester. To find out the specific number of credits you can take when overloading, and the process to request an overload, you should Consult with your Academic Advisor."),
     ("Can I take an internship while I'm still completing my last two CET courses?",
      "Yes you can take an internship even if you havent completed last two CET  courses since the internship lasses has no prerequisite."),
@@ -96,68 +97,65 @@ questions_answers = [
     ("I need help choosing between CET3525 and CET3625 next semester. What should I consider?",
      "You can not take CET3625 before taking CET3525, so first cosider taking CET3525 then in the next semester take CET3625."),
     # Hard
-    ("Given my completed courses (CET1111, CET1150, ENG1101), provide a custom-made step-by-step plan for the remaining semesters.", 
-     
-     "Based on the courses you've completed (CET 1111, CET 1150, ENG 1101), here's a step-by-step plan for the remaining semesters:",
-     "You've already completed first semester.",
-     "Second Semester: CET 1120 (2 credits) - No prerequisites.",
-     "CET 1100 (2 credits) - No prerequisites.",
-     "MAT 1275 (4 credits), ENG 1121 (3 credits), CET 1250(3 credits), CET 1211",
-     "Third Semester: CET 2312 (4 credits) - Prerequisite: CET 1120; Corequisite: PHY 1433.",
-     "CET 2350 (4 credits) - Prerequisite/Corequisite: CET 1250 and MAT 1375.",
-     "CET 2370 (2 credits) - Prerequisite: CET 1250.",
-     "CET 2390 (1 credit) - Prerequisite/Corequisite: CET 2370.",
-     "PHY 1433 (4 credits) - Prerequisite: MAT 1275.",
-     "MAT 1375(4 credits)",
-     "Fourth Semester: CET 2450 (3 credits) - Prerequisite: CET 2350.",
-     "CET 2455 (2 credits) - Prerequisite: CET 2370.",
-     "CET 2461 (2 credits) - Prerequisite/Corequisite: CET 2455, MAT 1475.",
-     "Technical elective, MAT 1475 (4 credits), Flex core  1 (3 credits)",
-     "Fifth Semester: CET 3510 (4 credits) - Prerequisite/Corequisite: CET 2411 and MAT 1575.",
-     "CET 3525 (4 credits) - Prerequisite/Corequisite: MAT 1575.",
-     "MAT 1575 (4 credits) - Prerequisite: MAT 1475.",
-     "PHY 1434 (3 credits), Flex core 2",
-     "Sixth Semester: MAT 2680 (3 credits) - Prerequisite: MAT 1575.",
-     "CET 3615 (4 credits) - Prerequisites: MAT 1575, CET 3525, and PHYS 1434 or PHYS 1442.",
-     "CET 3625 (1 credit) - Prerequisite: CET 3525; Corequisite: MAT 2680.",
-     "CET 3640 (3 credits) - Prerequisites: CET 2411 and CET 3510.",
-     "FLEX CORE 3, COM 1330 (3 credits)",
-     "Seventh Semester: CET 4711 (2 credits) - Prerequisite: CET 3640 and CET 4705.",
-     "MAT 2580 (3 credits) - Prerequisite/Corequisite: MAT 1575.",
-     "CET 4705 (2 credits) - Prerequisite: CET 3625 with a grade of C or better.",
-     "CET 4773 (4 credits) - Prerequisite: CET 3510.",
-     "Technical Elective 1 (4 credits), FLEX CORE 4",
-     "Eighth Semester: Technical Elective 2 (3 credits), CET 4811 (2 credits) - Prerequisites: CET 3640, CET 4711.",
-     "CET 4805 (2 credits) - Prerequisite: CET 4705.",
-     "CET 4864 (4 credits) - Prerequisites: CET 3625, MAT 2580.",
-     "ID Course.",
-     ),
-    ("I want to know the courses I can take in the 2nd semester. I've completed CET1120, CET 1150 but I haven't completed all the first-semester courses yet. Can you recommend some courses?", 
+    ("Given my completed courses (CET1111, CET1150, ENG1101), provide a custom-made step-by-step plan for the remaining semesters.",
+     """Based on the courses you've completed (CET 1111, CET 1150, ENG 1101), here's a step-by-step plan for the remaining semesters:
+You've already completed first semester.
+Second Semester: CET 1120 (2 credits) - No prerequisites.
+CET 1100 (2 credits) - No prerequisites.
+MAT 1275 (4 credits), ENG 1121 (3 credits), CET 1250(3 credits), CET 1211
+Third Semester: CET 2312 (4 credits) - Prerequisite: CET 1120; Corequisite: PHY 1433.
+CET 2350 (4 credits) - Prerequisite/Corequisite: CET 1250 and MAT 1375.
+CET 2370 (2 credits) - Prerequisite: CET 1250.
+CET 2390 (1 credit) - Prerequisite/Corequisite: CET 2370.
+PHY 1433 (4 credits) - Prerequisite: MAT 1275.
+MAT 1375(4 credits)
+Fourth Semester: CET 2450 (3 credits) - Prerequisite: CET 2350.
+CET 2455 (2 credits) - Prerequisite: CET 2370.
+CET 2461 (2 credits) - Prerequisite/Corequisite: CET 2455, MAT 1475.
+Technical elective, MAT 1475 (4 credits), Flex core  1 (3 credits)
+Fifth Semester: CET 3510 (4 credits) - Prerequisite/Corequisite: CET 2411 and MAT 1575.
+CET 3525 (4 credits) - Prerequisite/Corequisite: MAT 1575.
+MAT 1575 (4 credits) - Prerequisite: MAT 1475.
+PHY 1434 (3 credits), Flex core 2
+Sixth Semester: MAT 2680 (3 credits) - Prerequisite: MAT 1575.
+CET 3615 (4 credits) - Prerequisites: MAT 1575, CET 3525, and PHYS 1434 or PHYS 1442.
+CET 3625 (1 credit) - Prerequisite: CET 3525; Corequisite: MAT 2680.
+CET 3640 (3 credits) - Prerequisites: CET 2411 and CET 3510.
+FLEX CORE 3, COM 1330 (3 credits)
+Seventh Semester: CET 4711 (2 credits) - Prerequisite: CET 3640 and CET 4705.
+MAT 2580 (3 credits) - Prerequisite/Corequisite: MAT 1575.
+CET 4705 (2 credits) - Prerequisite: CET 3625 with a grade of C or better.
+CET 4773 (4 credits) - Prerequisite: CET 3510.
+Technical Elective 1 (4 credits), FLEX CORE 4
+Eighth Semester: Technical Elective 2 (3 credits), CET 4811 (2 credits) - Prerequisites: CET 3640, CET 4711.
+CET 4805 (2 credits) - Prerequisite: CET 4705.
+CET 4864 (4 credits) - Prerequisites: CET 3625, MAT 2580.
+ID Course."""
+    ),
+    ("I want to know the courses I can take in the 2nd semester. I've completed CET1120, CET 1150 but I haven't completed all the first-semester courses yet. Can you recommend some courses?",
      "For the 2nd semester, you can take CET 1100, CET 1111, MAT 1275, CET 1250, ENG 1100, Flex Core 1."),
-    ("If I want to graduate in six/seven semesters instead of eight, how should I plan my courses?", 
-     
-         "1st semester: CET 1100, CET 1111, CET 1120, CET 1150, ENG 1100, MAT 1275",
-         "2nd semester: CET 1211, CET 1250, CET 2312, CET 2350, MAT 1375, PHY 1433",
-         "3rd semester: MAT 1475, PHY 1434, CET 2370, CET 2390, CET 2450, Technical Elective",
-         "4th semester: CET 2455, CET 2461, CET 3510, CET 3525, Flex Core 2, MAT 1575",
-         "5th semester: CET 3615, CET 3625, MAT 2680, CET 3640, Flex Core 3, CET 4773",
-         "6th semester: CET 4705, CET 4711, Technical Elective 1, Flex Core 4, ID, MAT 2580, COM 1330",
-         "7th semester: CET 4805, CET 4811, CET 4864, Technical Elective 2, Flex Core 1, ENG 1121"
-     ),
+    ("If I want to graduate in six/seven semesters instead of eight, how should I plan my courses?",
+     """1st semester: CET 1100, CET 1111, CET 1120, CET 1150, ENG 1100, MAT 1275
+2nd semester: CET 1211, CET 1250, CET 2312, CET 2350, MAT 1375, PHY 1433
+3rd semester: MAT 1475, PHY 1434, CET 2370, CET 2390, CET 2450, Technical Elective
+4th semester: CET 2455, CET 2461, CET 3510, CET 3525, Flex Core 2, MAT 1575
+5th semester: CET 3615, CET 3625, MAT 2680, CET 3640, Flex Core 3, CET 4773
+6th semester: CET 4705, CET 4711, Technical Elective 1, Flex Core 4, ID, MAT 2580, COM 1330
+7th semester: CET 4805, CET 4811, CET 4864, Technical Elective 2, Flex Core 1, ENG 1121"""
+    ),
     # Long Answer
     ("My catalog year is 2023, but I took a break. Should I follow the new 2025 curriculum now?",
      "Yes you have to follow 2025 curriculum."),
-    ("List all courses till the eighth semester.", 
-     
-         "1st semester: CET 1100, CET 1111, CET 1120, CET 1150, ENG 1100, MAT 1275",
-         "2nd semester: CET 1211, MAT 1375, CET 1250, ENG 1121, PHY 1433",
-         "3rd semester: CET 2312, MAT 1475, PHY 1434, CET 2350, CET 2370, CET 2390",
-         "4th semester: CET 2450, CET 2455, CET 2461, Technical Elective, MAT 1575",
-         "5th semester: Flex Core 1, CET 3510, CET 3525, MAT 2680, ID",
-         "6th semester: Flex Core 2, CET 3615, CET 3625, CET 3640, Technical Elective 1",
-         "7th semester: CET 4705, CET 4711, CET 4773, Flex Core 3, Technical Elective 2",
-         "8th semester: CET 4811, CET 4864, CET 4805, COM 1330, Flex Core 4"
-     )
+    ("List all courses till the eighth semester.",
+     """1st semester: CET 1100, CET 1111, CET 1120, CET 1150, ENG 1100, MAT 1275
+2nd semester: CET 1211, MAT 1375, CET 1250, ENG 1121, PHY 1433
+3rd semester: CET 2312, MAT 1475, PHY 1434, CET 2350, CET 2370, CET 2390
+4th semester: CET 2450, CET 2455, CET 2461, Technical Elective, MAT 1575
+5th semester: Flex Core 1, CET 3510, CET 3525, MAT 2680, ID
+6th semester: Flex Core 2, CET 3615, CET 3625, CET 3640, Technical Elective 1
+7th semester: CET 4705, CET 4711, CET 4773, Flex Core 3, Technical Elective 2
+8th semester: CET 4811, CET 4864, CET 4805, COM 1330, Flex Core 4"""
+    )
 ]
 
 def calculate_cosine_similarity(text1, text2):
